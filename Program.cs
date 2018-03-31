@@ -22,10 +22,10 @@ namespace DeserializeXML
             }
 
             // Get files in directory(and subdirectoies) with extension .xml
-            var filesToDeserialize = Directory.GetFiles(directoryPath, "*.xml", SearchOption.AllDirectories);
+            var xmlFiles = Directory.GetFiles(directoryPath, "*.xml", SearchOption.AllDirectories);
 
             ///TODO: deserialize each file
-            foreach (string file in filesToDeserialize)
+            foreach (string file in xmlFiles)
             {
                 ProcessFile(file);
             }
